@@ -5,7 +5,6 @@ const Shell = imports.gi.Shell;
 const Mainloop = imports.mainloop;
 const Clutter = imports.gi.Clutter;
 const PanelMenu = imports.ui.panelMenu;
-const PopupMenu = imports.ui.popupMenu;
 const Animation = imports.ui.animation;
 const Meta = imports.gi.Meta;
 const ExtensionUtils = imports.misc.extensionUtils;
