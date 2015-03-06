@@ -7,6 +7,7 @@ const Params = imports.misc.params;
 const Signals = imports.signals;
 const Clutter = imports.gi.Clutter;
 const ExtensionUtils = imports.misc.extensionUtils;
+const Animation = imports.ui.animation;
 
 const Me = ExtensionUtils.getCurrentExtension();
 const Utils = Me.imports.utils;
@@ -99,7 +100,7 @@ const StatusBar = new Lang.Class({
             })
         );
         this._message_label.get_clutter_text().use_markup = true;
-        this._spinner = new Panel.AnimatedIcon(
+        this._spinner = new Animation.AnimatedIcon(
             'process-working.svg',
             24
         );

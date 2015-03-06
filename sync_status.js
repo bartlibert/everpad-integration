@@ -1,6 +1,7 @@
 const St = imports.gi.St;
 const Lang = imports.lang;
 const Panel = imports.ui.panel;
+const Animation = imports.ui.animation;
 const Clutter = imports.gi.Clutter;
 const ExtensionUtils = imports.misc.extensionUtils;
 
@@ -17,7 +18,7 @@ const EverpadSyncStatus = new Lang.Class({
             homogeneous: false
         });
 
-        this._spinner = new Panel.AnimatedIcon('process-working.svg', 24);
+        this._spinner = new Animation.AnimatedIcon('process-working.svg', 24);
         this.actor.add(this._spinner.actor, {
             row: 0,
             col: 1,

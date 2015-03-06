@@ -4,9 +4,9 @@ const Lang = imports.lang;
 const Shell = imports.gi.Shell;
 const Mainloop = imports.mainloop;
 const Clutter = imports.gi.Clutter;
-const Panel = imports.ui.panel;
 const PanelMenu = imports.ui.panelMenu;
 const PopupMenu = imports.ui.popupMenu;
+const Animation = imports.ui.animation;
 const Meta = imports.gi.Meta;
 const ExtensionUtils = imports.misc.extensionUtils;
 
@@ -239,7 +239,7 @@ const EverpadPanelButton = Lang.Class({
     _show_spinner: function() {
         if(this._spinner != null) return;
 
-        this._spinner = new Panel.AnimatedIcon('process-working.svg', 24)
+        this._spinner = new Animation.AnimatedIcon('process-working.svg', 24)
         this._spinner.actor.show();
         this._button_box.remove_all_children();
         this._button_box.add_actor(this._spinner.actor);

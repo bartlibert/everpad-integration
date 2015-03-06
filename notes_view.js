@@ -1,7 +1,7 @@
 const St = imports.gi.St;
 const Lang = imports.lang;
 const Mainloop = imports.mainloop;
-const Panel = imports.ui.panel;
+const Animation = imports.ui.animation;
 const Params = imports.misc.params;
 const ExtensionUtils = imports.misc.extensionUtils;
 
@@ -32,7 +32,7 @@ const EverpadNotesView = new Lang.Class({
             text: this._params.default_label,
             style_class: this._params.label_style_class
         });
-        this._spinner = new Panel.AnimatedIcon('process-working.svg', 24);
+        this._spinner = new Animation.AnimatedIcon('process-working.svg', 24);
         this.snippets_view = new EverpadSnippets.EverpadSnippetsView();
 
         this.actor.add(this._label, {

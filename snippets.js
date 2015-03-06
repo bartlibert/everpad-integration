@@ -6,7 +6,7 @@ const Clutter = imports.gi.Clutter;
 const Tweener = imports.ui.tweener;
 const Pango = imports.gi.Pango;
 const Params = imports.misc.params;
-const Panel = imports.ui.panel;
+const Animation = imports.ui.animation;
 const ExtensionUtils = imports.misc.extensionUtils;
 
 const Me = ExtensionUtils.getCurrentExtension();
@@ -1042,7 +1042,7 @@ const EverpadSnippetsView = new Lang.Class({
         this._message_bin.add_actor(message);
 
         if(show_spinner) {
-            let spinner = new Panel.AnimatedIcon('process-working.svg', 24);
+            let spinner = new Animation.AnimatedIcon('process-working.svg', 24);
             spinner.actor.show();
             this._message_bin.add_actor(spinner.actor);
         }
